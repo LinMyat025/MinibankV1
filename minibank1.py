@@ -24,16 +24,14 @@ class MiniBank:
                     print("Invalid Input. Try again.")
             except ValueError:
                 print("Invalid Input. Try again.")
-        
-
+                
     def returnId (self, transfer_username):
         userInfoLength :int = len(self.main_userInfo)
         for i in range (1, userInfoLength+1):
             if self.main_userInfo[i]['r_username'] == transfer_username:
                 return i
         return None
-
-    
+        
     def menu(self, loginID):
         menu_input: int = int(input("Press 1 to Transfer.\nPress 2 to Withdraw.\nPress 3 to update user data."))
 
@@ -157,9 +155,7 @@ class MiniBank:
 
                 else:
                     print("Invalid Input. Try again.")
-
-            
-    
+                    
     def login(self):
         print("\n_______This is login________\n")
         l_username: str = input("Please enter username: ")
@@ -196,7 +192,6 @@ class MiniBank:
             userInfoForm : dict = {id: {"r_username": r_username, "r_passcode": r_passcode2, "amount": r_amount}}
             self.main_userInfo.update(userInfoForm)
             print("#### Success Register ####")
-            print(self.main_userInfo)                           #delete later
 
     def CheckingUserCount(self):
         count = len(self.main_userInfo)
@@ -205,4 +200,5 @@ class MiniBank:
 if __name__=="__main__":
     miniBank: MiniBank = MiniBank()
     while True:
+
         miniBank.firstOption()
