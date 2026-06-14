@@ -1,0 +1,3 @@
+# MinibankV1 - Requirements
+# This project uses only Python built-in modules and has no external dependencies.
+# Python 3.6+ is required to run this application.
